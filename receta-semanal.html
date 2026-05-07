@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recet EC</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="navIcono"> <img src="icon.png"> </li>
+            <li ><a href="/index.html">Inicio</a></li>
+            <li ><a href="/receta-semanal.html">Receta Semanal</a></li>
+            <li><a href="/acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <section id="recetas">
+            <h1>Recetas Ecuatorianas</h1>
+            <article id="colada_avena_con_leche">
+                <img src="https://i.ytimg.com/vi/YVgFZZXgGsA/sddefault.jpg">
+                <h2>Colada de Avena con Leche</h2>
+                <p>La colada de avena con leche es una bebida tradicional, reconfortante y nutritiva. Ofrece una textura suave, ligera y fácil de digerir, ideal para toda la familia. Aporta energía inmediata y es valorada por ayudar a regular el colesterol y proteger la salud digestiva. Muchos crecimos tomando colada de avena. Su consumo puede ayudar a reducir los niveles de colesterol y mejorar el control del azúcar en la sangre. Hoy te enseño cómo prepararla. </p>
+                <h3>Ingredientes</h3>
+                <div id="ingredientes">
+
+                    <ul>
+                        <li> medio litro de agua</li>
+                        <li>medio litro de leche</li>
+                        <li>80g de avena</li>
+                        <li>medio bloque de panela</li>
+                        <li>12 gramos de canela</li>
+                        <li>8 granos de pimienta dulce</li>
+                        <li>4 clavos de olor</li>
+                        <li>1 aniz estrellado</li>
+                    </ul>
+                </div>
+
+                <h3>Preparación</h3>
+                <div id="preparacion">
+                    <ol>
+                        <li>Hervir por 10 minutos el agua con las especias y la panela en una olla tapada.</li>
+                        <li>Poner a remojar la avena en agua mientras tanto.</li>
+                        <li>Una vez hervido, retirar las especias y agregar la avena al contenido mientras se mezcla para evitar que se formen grumos. Dejar hervir la bebida 5 minutos más sin tapa.</li>
+                        <li>Agregar la leche y mezclar por 2 minutos.</li>
+                        <li>Por último, licuar la bebida. (opcional)</li>
+                    </ol>
+                </div>
+
+                <div id="informacion_nutricional">
+                    <h3>Información Nutricional</h3>
+                    <p>Valores estimados basados en los ingredientes base de la receta (250ml finales aprox.).</p>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Componente</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Energía</strong></td>
+                                <td>285 kcal</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><strong>Carbohidratos</strong></td>
+                                <td>58 g</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><strong>Fibra</strong></td>
+                                <td>2.4 g</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><strong>Proteína</strong></td>
+                                <td>5.2 g</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><strong>Grasas</strong></td>
+                                <td>4.8 g</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><strong>Calcio</strong></td>
+                                <td>145 mg</td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+        </section>
+        
+        
+        <section id="calculadora">
+            <h2>Calcula tus Ingredientes</h2>
+            <p>Calcula los ingredientes que vayas a usar según la cantidad de porciones que necesites. </p>
+            <form id="calcular_ingredientes">
+                <label for="porciones">Porciones</label>
+                <input id="porciones" type="number" step="1" value="1" required>
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="resultado"></div> 
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Recet EC - Tradición y Precisión.</p>
+        </footer>
+    </div>
+    
+    <script src="calcularIngredientes.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+:root {
+    --pacifico-oscuro: #1A365D;
+    --maiz-tostado: #F6AD55;
+    --rojo-achiote: #C53030;
+    --crema-andina: #FFFDF7;
+    --cacao-texto: #2D3748;
+    --sombra-elevacion: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--crema-andina);
+    color: var(--cacao-texto);
+    line-height: 1.7;
+}
+
+nav {
+    background-color: var(--pacifico-oscuro);
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--sombra-elevacion);
+}
+
+
+
+nav a {
+    color: var(--crema-andina);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--maiz-tostado);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    position: relative;
+}
+
+#navIcono {
+    position: absolute;
+    left: 0;
+}
+
+#navIcono img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+#navIcono img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+
+#main {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--rojo-achiote);
+    margin-bottom: 3rem;
+}
+
+#recetas > article, 
+#calculadora {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: var(--sombra-elevacion);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+#colada_avena_con_leche img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: var(--pacifico-oscuro);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#colada_avena_con_leche > p {
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    color: #4A5568;
+    line-height: 1.8;
+}
+
+#ingredientes, 
+#preparacion,
+#informacion_nutricional {
+    margin-bottom: 2.5rem;
+    background-color: rgba(246, 173, 85, 0.08);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(246, 173, 85, 0.4);
+}
+
+h3 {
+    color: var(--rojo-achiote);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+#ingredientes ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#ingredientes li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#ingredientes li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--maiz-tostado);
+}
+
+#preparacion ol {
+    counter-reset: contador-pasos;
+    list-style: none;
+    padding-left: 0;
+}
+
+#preparacion li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    counter-increment: contador-pasos;
+}
+
+#preparacion li::before {
+    content: counter(contador-pasos);
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    background-color: var(--maiz-tostado);
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(45, 55, 72, 0.1);
+}
+
+th {
+    font-weight: 600;
+    color: var(--pacifico-oscuro);
+    border-bottom: 2px solid var(--maiz-tostado);
+}
+
+#calcular_ingredientes {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    background-color: rgba(26, 54, 93, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(26, 54, 93, 0.1);
+}
+
+input[type="number"] {
+    padding: 0.8rem;
+    border: 2px solid var(--pacifico-oscuro);
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100px;
+}
+
+button {
+    background-color: var(--rojo-achiote);
+    color: #FFFFFF;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #9B2C2C;
+}
+
+footer {
+    background-color: var(--cacao-texto);
+    color: var(--crema-andina);
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-top: auto;
+}
