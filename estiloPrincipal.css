@@ -1,0 +1,88 @@
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+#main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 3rem;
+}
+
+.lema {
+    flex: 1;
+}
+
+.lema h1 {
+    font-size: 3.5rem;
+    color: #1A365D;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    border-bottom: none;
+}
+
+.lema p {
+    font-size: 1.2rem;
+    color: #2D3748;
+    margin-bottom: 2.5rem;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: transparent;
+    color: #C53030;
+    border: 2px solid #C53030;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: #C53030;
+    color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(197, 48, 48, 0.3);
+}
+
+.imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#plato-giratorio {
+    width: 100%;
+    max-width: 500px;
+    animation: rotacion 40s linear infinite;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.25));
+}
+
+@keyframes rotacion {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    #main {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .lema h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
